@@ -37,4 +37,43 @@
 			color: @navText;
 		}
 	}
+
+	&__adress,
+	&__shedule,
+	&__phone {
+		padding-left: 50px;
+
+		color: @navText;
+
+		margin-bottom: 40px;
+
+		position: relative;
+	}
+
+	&__adress::before,
+	&__shedule::before,
+	&__phone::before {
+		content: '';
+
+		width: 25px;
+		height: 25px;
+
+		border: 2px solid @navText;
+		border-radius: 50%;
+
+		position: absolute;
+		left: 0;
+	}
+
+	&__adress::before {
+		background: url('../img/ico/point.png') no-repeat 8px 6px;
+	}
+
+	&__shedule::before {
+		background: url('../img/ico/clock.png') no-repeat 6px 6px;
+	}
+
+	&__phone::before {
+		background: url('../img/ico/phone.png') no-repeat 8px 7px;
+	}
 }
