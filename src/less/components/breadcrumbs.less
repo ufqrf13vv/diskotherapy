@@ -1,0 +1,29 @@
+.breadcrumbs {
+	display: flex;
+
+	list-style: none;
+
+	padding: 0;
+	margin-bottom: 35px;
+	
+	color: @base;
+
+	&__item {
+		margin-right: 50px;
+	}
+
+	&__link {
+		text-decoration: none;
+
+		color: @base;
+
+		position: relative;
+
+		&::after {
+			content: '\2192';
+
+			position: absolute;
+			right: -35px;
+		}
+	}
+}

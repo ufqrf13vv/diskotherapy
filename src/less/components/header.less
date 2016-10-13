@@ -1,0 +1,120 @@
+.header {
+	display: flex;
+	flex-wrap: wrap;
+
+	padding-top: 50px;
+	padding-bottom: 30px;
+
+	@media @medium {
+		justify-content: space-between;
+	}
+
+	@media @small {
+		justify-content: center;
+	}
+
+	@media @extrasmall {
+		justify-content: center;
+	}
+
+	&__logo {
+		display: flex;
+		align-self: center;
+
+		font-weight: bold;
+		font-style: italic;
+		font-size: 36px;
+
+		 background: linear-gradient(#379098 40%, #66c9d2 60%);
+		 -webkit-background-clip: text;
+		 color: transparent;
+
+		@media @medium {
+			margin-bottom: 0;
+		}
+
+		 @media @small {
+		 	font-size: 36px;
+		 	margin-bottom: 30px;
+		 }
+
+		 @media @extrasmall {
+		 	font-size: 24px;
+		 	margin-bottom: 30px;
+		 }
+	}
+
+	&__block {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	&__contacts {
+		font-size: 13px;
+
+		@media @extrasmall {
+			font-size: 11px;
+		}
+	}
+
+	&__contacts:first-child {
+		margin-right: 50px;
+
+		@media @extrasmall {
+			margin-bottom: 30px;
+			margin-right: 5px;
+		}
+	}
+
+	&__adress,
+	&__shedule {
+		color: #000000;
+
+		padding-left: 35px;
+
+		line-height: 20px;
+
+		position: relative;
+	}
+
+	&__adress:first-child,
+	&__shedule:first-child {
+		margin-bottom: 25px;
+	}
+
+	&__adress > span,
+	&__shedule > span {
+		color: @grey;
+	}
+
+	&__adress > span {
+		font-weight: bold;
+	}
+
+	&__adress::before,
+	&__shedule::before {
+		content: '';
+
+		border: 1px solid @base;
+		border-radius: 3px;
+
+		width: 30px;
+		height: 30px;
+
+		position: absolute;
+		top: 5px;
+		left: -10px;
+
+		@media @extrasmall {
+			left: 0;
+		}
+	}
+
+	&__adress::before {
+		background: url('../img/ico/header.png') no-repeat 6px 7px;
+	}
+
+	&__shedule::before {
+		background: url('../img/ico/header.png') no-repeat 6px -39px;
+	}
+}

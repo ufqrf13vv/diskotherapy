@@ -1,0 +1,114 @@
+.nav {
+	background: linear-gradient(to bottom, #379098, @base);
+
+	@media @medium {
+		margin-bottom: 65px;
+	}
+
+	@media @small {
+		margin-bottom: 20px;
+	}
+
+	@media @extrasmall {
+		margin-bottom: 20px;
+	}
+
+	&__list {
+		display: flex;
+
+		list-style: none;
+
+		padding: 0;
+		margin: 0;
+	}
+
+	&__item {
+		flex: 1;
+
+		text-align: center;
+
+		&:hover {
+			background: #185d67;
+		}
+
+		&-parent {
+			padding-top: 12px;
+
+			text-transform: uppercase;
+			color: @navText; 
+
+			position: relative;
+
+			& > span {
+				position: relative;
+			}
+
+			& > span::after {
+				content: '';
+
+				border-left: 4px solid transparent;
+	    		border-right: 4px solid transparent;
+	    		border-top: 5px solid @navText;
+
+				position: absolute;
+				top: 5px;
+
+				@media @large {
+					right: -25px;
+				}
+
+				@media @medium {
+					right: -15px;
+				}
+			}
+
+			&:hover .nav__sublist {
+				display: block;
+			}
+		}
+	}
+
+	&__link {
+		display: block;
+
+		text-decoration: none;
+		text-transform: uppercase;
+
+		padding-top: 12px;
+		padding-bottom: 12px;
+
+		color: @navText;
+	}
+
+	&__sublist {
+		display: none;
+
+		width: 310px;
+		box-sizing: border-box;
+
+		background: @body;
+
+		padding: 24px 45px 24px 30px;
+
+		box-shadow: 4px 4px 6px -1px #c2c1c0, 
+					-4px 4px 6px -1px #c2c1c0;
+
+		text-align: left;
+
+		position: absolute;
+		top: 40px;
+	}
+
+	&__subitem:not(:last-child) {
+		margin-bottom: 19px;
+	}
+
+	&__sublink {
+		display: block;
+
+		text-decoration: none;
+		text-transform: none;
+
+		color: @base;
+	}
+}

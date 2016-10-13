@@ -1,0 +1,40 @@
+.footer {
+	background: #318992;
+
+	padding: 30px 15px;
+
+	&__wrapper {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__block {
+
+	}
+
+	&__logo {
+		font-size: 24px;
+		font-style: italic;
+		color: @navText;
+
+		& > span {
+			font-size: 13px;
+		}
+	}
+
+	&__menu {
+		padding: 0;
+		margin: 0;
+
+		list-style: none;	
+
+		&-item {
+			display: inline-block;
+		}
+
+		&-link {
+			font-size: 11px;
+			color: @navText;
+		}
+	}
+}

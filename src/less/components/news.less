@@ -1,0 +1,32 @@
+.news {
+	display: flex;
+	flex-wrap: wrap;
+
+	margin-bottom: 45px;
+
+	&__item {
+		display: flex;
+		width: 330px;
+
+		@media @extrasmall {
+			margin-bottom: 15px;
+		}
+	}
+
+	&__photo {
+		margin-right: 10px;
+	}
+
+	&__date {
+		width: 100%;
+		padding: 5px 0;
+		margin-bottom: 10px;
+
+		text-align: center;
+
+		background: @base;
+
+		font-weight: bold;
+		color: @navText;
+	}
+}
