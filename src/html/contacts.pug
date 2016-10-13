@@ -1,0 +1,35 @@
+doctype html
+html
+	head
+		meta(charset='UTF-8')
+		meta(name='viewport', content='width=device-width, initial-scale=1.0')
+		title Контакты
+
+		link(rel='stylesheet', href='css/normalize.css')
+		link(rel='stylesheet', href='css/style.css')
+
+	body
+		.container
+			include includes/header
+
+			ul.breadcrumbs
+				li.breadcrumbs__item
+					a.breadcrumbs__link(href="#") Главная
+				li.breadcrumbs__item О компании
+
+			.wrapper
+				include includes/aside
+
+				.content
+					h2 Мы располагаемся по следующим адресам:
+					p.
+						630073 г. Новосибирск, ул. Блюхера 30/ 1, ост. "Метро Студенческая" , 2-й этаж, вход через поликлинику НГТУ.
+						Работаем с понедельника по пятницу с 9.00 до 18.30, выходной суббота и воскресенье, по предварительной записи по телефонам:
+						Тел: 8 (383) 346-05-84, 8-913-912-8004
+						E-mail: d-klinika@mail.ru
+						Адрес для корреспонденции: 630073 г.Новосибирск а/я 154
+
+					.map
+						img(src="img/map.png")
+
+			include includes/footer

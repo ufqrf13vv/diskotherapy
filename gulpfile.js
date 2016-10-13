@@ -20,14 +20,14 @@ var path = {
         fonts: 'build/fonts/'
     },
     src: { 
-        pug: 'src/html/*.pug', 
+        pug: 'src/html/**/*.pug', 
         js: 'src/js/main.js',
         style: 'src/less/style.less',
         img: 'src/img/**/*.*',
         fonts: 'src/fonts/**/*.*'
     },
     watch: { 
-        html: 'src/html/*.pug',
+        html: 'src/html/**/*.pug',
         js: 'src/js/**/*.js',
         style: 'src/less/**/*.less',
         img: 'src/img/**/*.*',

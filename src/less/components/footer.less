@@ -1,21 +1,64 @@
 .footer {
 	background: #318992;
 
-	padding: 30px 15px;
+	color: @navText;
+
+	padding: 0 15px 30px 15px;
 
 	&__wrapper {
 		display: flex;
 		justify-content: space-between;
+
+		padding-top: 30px;
+
+		@media @small {
+			flex-wrap: nowrap;
+		}
+
+		@media @extrasmall {
+			flex-wrap: wrap;
+		}
+
+		&:first-child {
+			border-bottom: 1px solid @navText;
+
+			@media @small {
+				padding-bottom: 50px;
+			}
+
+			@media @extrasmall {
+				padding-bottom: 0;
+			}
+		}
 	}
 
 	&__block {
+		margin-bottom: 0px;
 
+		@media @extrasmall {
+			margin-bottom: 30px;
+		}
+	}
+
+	&__block:not(:first-child) {
+		width: 310px;
 	}
 
 	&__logo {
 		font-size: 24px;
 		font-style: italic;
-		color: @navText;
+
+		@media @medium {
+			margin-bottom: 145px;
+		}
+
+		@media @small {
+			margin-bottom: 70px;
+		}
+
+		@media @extrasmall {
+			margin-bottom: 30px;
+		}
 
 		& > span {
 			font-size: 13px;
@@ -34,6 +77,8 @@
 
 		&-link {
 			font-size: 11px;
+			font-style: italic;
+
 			color: @navText;
 		}
 	}
@@ -41,13 +86,27 @@
 	&__adress,
 	&__shedule,
 	&__phone {
+		line-height: 18px;
+
 		padding-left: 50px;
-
-		color: @navText;
-
 		margin-bottom: 40px;
 
 		position: relative;
+	}
+
+	&__adress {
+		height: 55px;
+	}
+
+	&__shedule {
+		height: 35px;
+	}
+
+	&__phone {
+		font-size: 18px;
+		line-height: 24px;
+
+		margin-bottom: 0;
 	}
 
 	&__adress::before,
@@ -62,6 +121,7 @@
 		border-radius: 50%;
 
 		position: absolute;
+		top: 3px;
 		left: 0;
 	}
 
@@ -75,5 +135,35 @@
 
 	&__phone::before {
 		background: url('../img/ico/phone.png') no-repeat 8px 7px;
+	}
+
+	&__copyright {
+		font-size: 11px;
+
+		@media @small {
+			width: 170px;
+
+			margin-bottom: 0;
+		}
+
+		@media @extrasmall {
+			width: 100%;
+
+			margin-bottom: 25px;
+		}
+	}
+
+	&__developed {
+		display: flex;
+
+		font-size: 11px;
+	}
+
+	&__text {
+		width: 115px;
+
+		text-align: right;
+
+		margin-right: 14px;
 	}
 }

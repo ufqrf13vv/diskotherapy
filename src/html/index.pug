@@ -10,63 +10,7 @@ html
 
 	body
 		.container
-			header.header
-					.header__logo Клиника дискотерапии
-
-					.header__block
-						.header__contacts
-							.header__adress ул. Блюхера 30/ 1 <br>
-								span +7 (343) 346-05-84
-							.header__adress ул. Обская 2 <br>
-								span +7 (343) 310-07-10
-						.header__contacts
-							.header__shedule Пн. - Пт. 09:00 - 18:30 <br>
-								span Суб. Вс: выходной
-							.header__shedule Пн. - Пт. 10:00 - 20:00 <br>
-								span Суббота с 9.00 до 15.00
-
-			.nav
-				ul.nav__list
-					li.nav__item 
-						a.nav__link(href="#") Главная
-					li.nav__item.nav__item-parent 
-						span О нас
-						ul.nav__sublist
-							li.nav__subitem
-								a.nav__sublink(href="#") О нас
-							li.nav__subitem
-								a.nav__sublink(href="#") Лицензии, заключения, свидетельства
-							li.nav__subitem
-								a.nav__sublink(href="#") Публикации о нас
-							li.nav__subitem
-								a.nav__sublink(href="#") Контакты контролирующих органов
-							li.nav__subitem
-								a.nav__sublink(href="#") Устав ООО"Клиника дискотерапии"
-							li.nav__subitem
-								a.nav__sublink(href="#") Структура клиники
-							li.nav__subitem
-								a.nav__sublink(href="#") Внутренний распорядок
-					li.nav__item.nav__item-parent 
-						span Наши услуги
-						ul.nav__sublist
-							li.nav__subitem
-								a.nav__sublink(href="#") Наши услуги
-							li.nav__subitem
-								a.nav__sublink(href="#") Иглорефлексотерапия
-							li.nav__subitem
-								a.nav__sublink(href="#") Физиотерапевтическое лечение
-							li.nav__subitem
-								a.nav__sublink(href="#") Кинезиотерапия
-							li.nav__subitem
-								a.nav__sublink(href="#") Паравертебральная терапия
-					li.nav__item 
-						a.nav__link(href="#") Специалисты
-					li.nav__item 
-						a.nav__link(href="#") Фотогалерея
-					li.nav__item 
-						a.nav__link(href="#") Прайс-лист
-					li.nav__item 
-						a.nav__link(href="#") Контакты
+			include includes/header
 
 			.welcome
 				.welcome__block
@@ -85,24 +29,7 @@ html
 				li.breadcrumbs__item О компании
 
 			.wrapper
-				aside
-					form.search
-						input.search__input(type="text", placeholder="Поиск...")
-						input.search__submit(type="submit")
-					ul.left-menu
-						li.left-menu__item
-							a.left-menu__link(href="#") Физиотерапевтическое лечение
-						li.left-menu__item
-							a.left-menu__link(href="#") Кинезиотерапия
-						li.left-menu__item
-							a.left-menu__link(href="#") Паравертебральная терапия
-						li.left-menu__item
-							a.left-menu__link(href="#") Иглорефлексотерапия
-					.specoffer
-						.specoffer__title Спецпредложение
-						.specoffer__content
-							.specoffer__text ООО «ЛЕГАСИ МЕД» предлагает вашему вниманию медицинское оборудование и расходные материалы в широком ассортименте. У нас в наличии более 5 000 различных позиций на
-							img(src="img/spec.png")
+				include includes/aside
 
 				.content
 					.news
@@ -111,14 +38,14 @@ html
 								.news__date 12.08.16
 								img(src="img/new-1.png")
 							.news__content
-								a.news__title ООО «ЛЕГАСИ МЕД» предлагает
+								a.news__title(href="#") ООО «ЛЕГАСИ МЕД» предлагает
 								p вашему вниманию медицинское оборудование и расходные
 						.news__item
 							.news__photo
 								.news__date 12.08.16
 								img(src="img/new-1.png")
 							.news__content
-								a.news__title ООО «ЛЕГАСИ МЕД» предлагает
+								a.news__title(href="#") ООО «ЛЕГАСИ МЕД» предлагает
 								p вашему вниманию медицинское оборудование и расходные
 
 					p.
@@ -157,35 +84,4 @@ html
 						.feedback__item-text Очень довольна результатом. Страдала давно, в 2002 году делала операцию по удалению грыжи. А через два года она появилась вновь. Случайно в газете увидела информацию о клинике, позвонила и поехала. Прошла 2 курса и сделала томографию. Грыжа исчезла. Таких проблем, как раньше нет. Всем рекомендую этот центр.
 				a.feedback__all(href="#") Все отзывы
 
-			footer.footer
-				.footer__wrapper
-					.footer__block
-						.footer__logo Клиника дискотерапии <br>
-							span лечение неврологических направлений
-						ul.footer__menu
-							li.footer__menu-item
-								a.footer__menu-link(href="#") Новости
-							li.footer__menu-item
-								a.footer__menu-link(href="#") О компании
-							li.footer__menu-item
-								a.footer__menu-link(href="#") Оборудование
-							li.footer__menu-item
-								a.footer__menu-link(href="#") Отзывы
-							li.footer__menu-item
-								a.footer__menu-link(href="#") Контакты
-
-					.footer__block
-						.footer__adress 630102 г. Новосибирск, ул. Обская (Октябрьский), 2
-						.footer__shedule Понедельник - пятница с 8.00 до 10:00 <br>Субббота с 9.00 до 15.00
-						.footer__phone +7 (383) 264-41-72 <br>+7 (983)-510-07-10
-
-					.footer__block
-						.footer__adress 630073 ул. Блюхера 30/ 1, ост. "Метро Студенческая" , 2-й этаж, вход через поликлинику НГТУ
-						.footer__shedule Понедельник - пятница с 9.00 до 18:00 Суб. Вс. по предварительной записи
-						.footer__phone +7 (383) 346-05-84 <br>+7 (913)-912-80-04
-
-				.footer__wrapper
-					.footer__copyright ООО “Клиника дискотерапии” Copyright © 2016
-					.footer__developed 
-						.footer__text Создание и продвижение сайтов
-						img(src="")
+			include includes/footer
