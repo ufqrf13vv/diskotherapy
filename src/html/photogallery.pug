@@ -1,0 +1,57 @@
+doctype html
+html
+	head
+		meta(charset='UTF-8')
+		meta(name='viewport', content='width=device-width, initial-scale=1.0')
+		title Фотогалерея
+
+		link(rel='stylesheet', href='css/normalize.css')
+		link(rel='stylesheet', href='css/style.css')
+
+	body
+		.container
+			include includes/header
+
+			ul.breadcrumbs
+				li.breadcrumbs__item
+					a.breadcrumbs__link(href="#") Главная
+				li.breadcrumbs__item О компании
+
+			.wrapper
+				include includes/aside
+
+				.content
+					.photogallery
+						.photogallery__wrapper
+							a.photogallery__item(href="photo.html")
+								.photogallery__image-bg
+									.photogallery__image
+										img(src="img/photo-2.png", width="230", height="250")
+								.photogallery__subtitle Наша клиника
+							a.photogallery__item(href="photo.html")
+								.photogallery__image-bg
+									.photogallery__image
+										img(src="img/photo-2.png", width="230", height="250")
+								.photogallery__subtitle День открытых дверей
+							a.photogallery__item(href="#")
+								.photogallery__image-bg
+									.photogallery__image
+										img(src="img/photo-2.png", width="230", height="250")
+								.photogallery__subtitle День открытых дверей
+							a.photogallery__item(href="#")
+								.photogallery__image-bg
+									.photogallery__image
+										img(src="img/photo-2.png", width="230", height="250")
+								.photogallery__subtitle День открытых дверей
+							a.photogallery__item(href="#")
+								.photogallery__image-bg
+									.photogallery__image
+										img(src="img/photo-2.png", width="230", height="250")
+								.photogallery__subtitle День открытых дверей
+							a.photogallery__item(href="#")
+								.photogallery__image-bg
+									.photogallery__image
+										img(src="img/photo-2.png", width="230", height="250")
+								.photogallery__subtitle День открытых дверей
+
+			include includes/footer

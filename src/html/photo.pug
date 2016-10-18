@@ -1,0 +1,56 @@
+doctype html
+html
+	head
+		meta(charset='UTF-8')
+		meta(name='viewport', content='width=device-width, initial-scale=1.0')
+		title Наша клиника
+
+		link(rel='stylesheet', href='css/normalize.css')
+		link(rel='stylesheet', href='css/style.css')
+
+	body
+		.container
+			include includes/header
+
+			ul.breadcrumbs
+				li.breadcrumbs__item
+					a.breadcrumbs__link(href="#") Главная
+				li.breadcrumbs__item
+					a.breadcrumbs__link(href="#") Фотогалерея
+				li.breadcrumbs__item Наша клиника
+
+			.wrapper
+				include includes/aside
+
+				.content
+					.photogallery
+						.photogallery__header
+							a.photogallery__back(href="#") Назад
+							.photogallery__title-small Наша клиника
+						.photogallery__wrapper
+							.photogallery__image-bg
+								img(src="img/photo-2.png", width="230", height="250")
+							.photogallery__image-bg
+								img(src="img/photo-2.png", width="230", height="250")
+							.photogallery__image-bg
+								img(src="img/photo-2.png", width="230", height="250")
+							.photogallery__image-bg
+								img(src="img/photo-2.png", width="230", height="250")
+							.photogallery__image-bg
+								img(src="img/photo-2.png", width="230", height="250")
+							.photogallery__image-bg
+								img(src="img/photo-2.png", width="230", height="250")
+			.feedback
+				.feedback__title Отзывы
+				.feedback__wrapper
+					.feedback__item
+						.feedback__item-title - Наталья Владимировна
+						.feedback__item-text Очень довольна результатом. Страдала давно, в 2002 году делала операцию по удалению грыжи. А через два года она появилась вновь. Случайно в газете увидела информацию о клинике, позвонила и поехала. Прошла 2 курса и сделала томографию. Грыжа исчезла. Таких проблем, как раньше нет. Всем рекомендую этот центр.
+					.feedback__item
+						.feedback__item-title - Наталья Владимировна
+						.feedback__item-text Очень довольна результатом. Страдала давно, в 2002 году делала операцию по удалению грыжи. А через два года она появилась вновь. Случайно в газете увидела информацию о клинике, позвонила и поехала. Прошла 2 курса и сделала томографию. Грыжа исчезла. Таких проблем, как раньше нет. Всем рекомендую этот центр.
+					.feedback__item
+						.feedback__item-title - Наталья Владимировна
+						.feedback__item-text Очень довольна результатом. Страдала давно, в 2002 году делала операцию по удалению грыжи. А через два года она появилась вновь. Случайно в газете увидела информацию о клинике, позвонила и поехала. Прошла 2 курса и сделала томографию. Грыжа исчезла. Таких проблем, как раньше нет. Всем рекомендую этот центр.
+				a.feedback__all(href="#") Все отзывы
+			include includes/footer
