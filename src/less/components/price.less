@@ -1,0 +1,50 @@
+.price {
+	width: 90%;
+
+	font-size: 12px;
+
+	border-collapse: collapse;
+
+	& th {
+		font-style: italic;
+		font-weight: normal;
+		color: @base;
+
+		text-align: left;
+		border-bottom: 1px solid #929291;
+
+		padding-bottom: 10px;
+	}	
+
+	&__first {
+		padding-top: 18px;
+	}
+
+	& td {
+		padding-top: 10px;
+
+		overflow: hidden;
+	}
+
+	& td:last-child {
+		padding-left: 15px;
+	}
+
+	&__text {
+		display: inline-block;
+
+		position: relative;
+
+		&::after {
+			content: '';
+			width: 410px;
+			height: 1px;
+
+			background: #9ec0c3;
+
+			position: absolute;
+			top: 6px;
+			right: -420px;
+		}
+	}
+}
